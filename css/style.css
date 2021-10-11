@@ -1,0 +1,198 @@
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+  bottom: 0;
+  transform: translateZ(-2px) scale(3);
+}
+
+.cloud1 {
+  position: absolute;
+  width: 523px;
+  height: 335px;
+  left: -20px;
+  top: 120px;
+  background-image: url("../images/cloud1.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.8;
+}
+
+.cloud2 {
+  position: absolute;
+  width: 381.32px;
+  height: 213.97px;
+  left: 156px;
+  top: 0px;
+  background-image: url("../images/cloud2.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.8;
+}
+
+.cloud3 {
+  position: absolute;
+  width: 200px;
+  height: 132px;
+  left: 15px;
+  top: 550px;
+  background-image: url("../images/cloud3.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+}
+
+.cloud4 {
+  position: absolute;
+  width: 118.8px;
+  height: 82.11px;
+  left: 230px;
+  top: 520px;
+  background-image: url("../images/cloud4.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.8;
+}
+
+.cloud5 {
+  position: absolute;
+  width: 858.34px;
+  height: 550.11px;
+  left: 568px;
+  top: 300px;
+  background-image: url("../images/cloud5.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.star-l {
+  position: absolute;
+  width: 425.46px;
+  height: 100%;
+  left: 1%;
+  top: 180px;
+  background-image: url("../images/stars-l.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+
+.star-r {
+  position: absolute;
+  width: 434.63px;
+  height: 100%;
+  left: 75%;
+  top: 416px;
+  background-image: url("../images/star-r.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+
+.star-m {
+  position: absolute;
+  width: 297.26px;
+  height: 291.39px;
+  left: 75%;
+  top: 199.76px;
+  background-image: url("../images/star-m.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+
+/* trophy-gamepad animation */
+@-webkit-keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.float {
+  z-index: -1;
+  transform: translatey(0px);
+  -webkit-animation: float 6s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
+}
+
+.gamepad {
+  width: 100%;
+  position: absolute;
+  left: 15.8%;
+  top: -40%;
+  z-index: -5;
+}
+.gamepad-cont{
+  margin-top: -8%;
+  z-index: -5;
+ 
+}
+
+
+@media (max-width: 700px) {
+  .gamepad-cont {
+    width: 180% !important;
+  }
+  .gamepad {
+    left: -6% !important;
+  }
+}
+
+
+.trophy-area {
+  display: flex;
+  align-items: flex-end;
+  opacity: 0.8;
+}
+
+.trophy-area .float img {
+  height: 25em;
+}
+
+/* Dont show small trophy */
+@media only screen and (min-width: 768px) {
+  .small-trophy-area {
+    display: none !important;
+  }
+}
+
+/* Dont show big trophy */
+@media only screen and (max-width: 767px) {
+  .trophy-area {
+    display: none !important;
+  }
+
+  .font-logo {
+    letter-spacing: 0.2em;
+  }
+}

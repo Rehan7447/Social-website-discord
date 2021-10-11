@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="GLOBAL RESPONSIVENESS // lg:text-xl">
+
+<head>
+  <title>Les pronos esport entre passionnés – Flair.GG</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <meta name="csrf-param" content="authenticity_token" />
+  <meta name="csrf-token"
+    content="Rb3AoACG0mjaFz3Td98wyYth7f3zYQGQCsmwj-Xqfrg6rtxxflGpRSc8_7e_de9hi_rsASCdGr7gTHRcZuK5hg" />
+
+  <script src="application.js" data-turbolinks-track="reload"></script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Noto+Sans:wght@400;700&family=Source+Sans+Pro:wght@300;400;600;700&family=Source+Code+Pro:wght@300;400;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="
+			font-body font-normal
+			//
+			min-h-screen
+			//
+			flex flex-col
+			//
+			text-white
+			gradient--purple
+		">
+  <div class="parallax">
+    <!-- background div -->
+    <div class="parallax__layer parallax__layer--back">
+      <div class="cloud1"></div>
+      <div class="cloud2"></div>
+      <div class="cloud3"></div>
+      <div class="cloud4"></div>
+      <div class="cloud5"></div>
+      <div class="star-l"></div>
+      <div class="star-r"></div>
+      <div class="star-m"></div>
+    </div>
+
+    <!-- all page content in this div -->
+    <div class="parallax__layer parallax__layer--base">
+      <!-- header -->
+      <header class="my-4 md:my-6 // flex justify-end items-center">
+        <div class="mx-6 w-full // flex justify-between items-center">
+          <div class="flex items-center">
+            <span class="font-mono font-light text-sm select-none">v0.3.0 (beta)</span>
+          </div>
+          <a class="font-title font-bold hover:text-gray-300" href="/fr/sign_in">Se connecter</a>
+        </div>
+      </header>
+      <!-- main content of page -->
+      <main class="mx-5 md:mx-10" style="z-index: 1">
+        <div class="flex justify-around">
+          <div class="flex flex-col">
+            <div class="
+									xs:-ml-6
+									md:ml-0
+									my-12
+									md:my-4
+									//
+									flex
+									items-center
+									//
+									select-none
+								">
+              <img class="
+										hidden
+										xs:block
+										//
+										h-32
+										md:h-48
+										mx-2
+										md:mx-3
+										//
+										pointer-events-none
+									" src="cross.svg" />
+              <h2 class="
+										font-logo font-thin
+										text-5xl
+										md:text-7xl
+										tracking-[0.4em]
+									">
+                FLAIR
+              </h2>
+              <div class="small-trophy-area float">
+                <img src="./images/trophy.svg" alt="pic" class="w-1/2 h-50" />
+              </div>
+            </div>
+
+            <h1 class="font-title font-bold text-3xl // mb-6">
+              Les pronos esport<br />entre passionnés
+            </h1>
+
+            <a class="
+									text-xs
+									font-title font-bold
+									tracking-widest
+									//
+									w-max
+									py-3
+									px-10
+									//
+									gradient--dark
+									rounded-lg
+									shadow-white
+								" href="/fr/account/sign_up">S&#39;INSCRIRE</a>
+          </div>
+
+          <div class="w-1/4 trophy-area">
+            <div class="float">
+              <img src="./images/trophy.svg" alt="pic" />
+            </div>
+          </div>
+        </div>
+
+        <div class="my-10 // flex flex-col items-center">
+          <h3 class="font-semibold // mb-2">
+            Vérifie que ta compétition favorite est disponible
+          </h3>
+          <div data-controller="search" class="
+								relative
+								w-full
+								max-w-sm
+								h-10
+								//
+								flex
+								items-center
+								//
+								bg-white bg-opacity-25
+								focus-within:bg-opacity-20
+								rounded
+								shadow-inner
+							">
+            <div class="mx-5">
+              <i class="fas fa-search"></i>
+            </div>
+
+            <form data-remote="true"
+              data-action="ajax:success-&gt;search#showResults click@window-&gt;search#hideResults"
+              data-search-target="form" autocomplete="off" class="w-full" action="/fr/competition_search"
+              accept-charset="UTF-8" method="get">
+              <input placeholder="csgo, lol, dota, rlcs, esl..." class="
+										w-full
+										placeholder-gray-300
+										//
+										bg-transparent
+										outline-none
+									" data-action="input-&gt;search#search focusin-&gt;search#search" type="text" name="query" id="query" />
+            </form>
+            <ul data-search-target="results" class="absolute top-full w-full"></ul>
+          </div>
+        </div>
+
+        <div class="
+							my-16
+							//
+							flex flex-col
+							items-center
+							md:items-start md:flex-row md:justify-around
+						">
+          <div class="text-center // max-w-xs md:w-1/3 / // flex flex-col">
+            <h2 class="font-title font-bold text-xl // md:min-h-[3.5rem]">
+              Crée une ligue avec tes amis
+            </h2>
+            <p class="text-sm font-semibold // my-2 md:min-h-[4rem]">
+              Choisis la compétition du moment et invite-les à te rejoindre
+            </p>
+            <img class="select-none pointer-events-none" src="leagues.png" />
+          </div>
+          <div class="
+								text-center
+								//
+								max-w-xs
+								md:w-1/3
+								my-8
+								md:my-0 md:mx-8
+								//
+								flex flex-col
+							">
+            <h2 class="font-title font-bold text-xl // md:min-h-[3.5rem]">
+              Remplis tes pronos avant match
+            </h2>
+            <p class="text-sm font-semibold // my-2 md:min-h-[4rem]">
+              Pour chaque match de la ligue, renseigne le score final (en tout
+              cas celui que tu espères !)
+            </p>
+            <img class="select-none pointer-events-none" src="forecasts.png" />
+          </div>
+          <div class="text-center // max-w-xs md:w-1/3 // flex flex-col">
+            <h2 class="font-title font-bold text-xl // md:min-h-[3.5rem]">
+              Monte dans le classement
+            </h2>
+            <p class="text-sm font-semibold // my-2 md:min-h-[4rem]">
+              Après chaque match, tu gagnes des points et tu évolues dans le
+              classement de ta ligue
+            </p>
+            <img class="select-none pointer-events-none" src="ranking.png" />
+          </div>
+        </div>
+
+        <a target="blank" class="
+							w-max
+							mx-auto
+							my-16
+							//
+							flex
+							items-center
+							//
+							gradient--discord
+							rounded-lg
+							shadow-md
+						" href="https://discord.gg/p9sQCVApDk" style="z-index: 101;">
+          <i class="text-3xl // m-5 mr-2.5 // fab fa-discord"></i>
+          <span class="font-semibold // mr-5">Viens nous faire coucou !</span>
+        </a>
+
+        <div class="float gamepad-cont">
+          <img src="./images/game.svg" alt="pic" class="gamepad" />
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+
+</html>
